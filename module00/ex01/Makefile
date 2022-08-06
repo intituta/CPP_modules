@@ -6,13 +6,15 @@
 #    By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/04 18:12:49 by kferterb          #+#    #+#              #
-#    Updated: 2022/08/04 18:35:18 by kferterb         ###   ########.fr        #
+#    Updated: 2022/08/06 11:05:43 by kferterb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	megaphone
+NAME	=	phonebook
 
-SRC		=	NAME.cpp
+HEADER	=	Contact.hpp PhoneBook.hpp
+
+SRC		=	main.cpp Contact.cpp PhoneBook.cpp
 
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 
@@ -24,10 +26,10 @@ CC		=	c++
 
 all		:	$(NAME)
 
-$(NAME)	:	$(OBJ)
+$(NAME)	:	$(OBJ) $(HEADER)
 			$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o 	:	%.cpp
+%.o 	:	%.cpp $(HEADER)
 			$(CC) $(FLAGS) -c $< -o $@
 
 clean	:
