@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:43 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 14:06:07 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/06 17:08:49 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,12 @@ void PhoneBook::addContact() {
 	}
 
 	this->contacts[this->count].addContact();
-	
+	if (this->contacts[this->count].isEmptyField()) {
+
+		std::cout << "Empty field. Try again\n";
+		this->contacts[this->count] = Contact();
+		this->count--;
+	}
 	this->count++;
 	
 }

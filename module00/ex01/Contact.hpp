@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:41 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 14:02:17 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/06 16:47:38 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class Contact {
 		Contact();
 		
 		void addContact();
+		bool isEmptyField();
+		
 		std::string getName();
 		std::string getLastname();
 		std::string getNickname();

@@ -6,16 +6,14 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:13 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 15:03:53 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/06 17:12:25 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Contact.hpp"
 
-Contact::Contact() : name("hh"), lastname("hh"), nickname("hh"), phoneNumber("hh"), darkSecret("hh") {
-	
-	std::cout << "Contact constructor\n";
+Contact::Contact() {
 	
 }
 
@@ -71,40 +69,62 @@ void Contact::setDarkSecret(std::string data) {
 
 }
 
-std::string addData(std::string data) {
-	
-	std::string input;
-	
-	while (1) {
-		
-		std::cout << "Enter " << data << ": ";
-		std::cin >> input;
-		
-		if (input.empty()) {
-
-			continue ;
-			
-		} else {
-
-			break ;
-		}
-	}
-	
-	return (input);
-}
-
 void Contact::addContact() {
 
-	this->name = addData("name");
-	this->lastname = addData("lastname");
-	this->nickname = addData("nickname");
-	this->phoneNumber = addData("phoneNumber");
-	this->darkSecret = addData("darkSecret");
-	std::cout << "Contact added.\n";
+	std::string data;
+	
+	std::cout << "Enter name: ";
+	std::cin >> data;
+	this->setName(data);
+
+	std::cout << "Enter lastname: ";
+	std::cin >> data;
+	this->setLastname(data);
+
+	std::cout << "Enter nickname: ";
+	std::cin >> data;
+	this->setNickname(data);
+
+	std::cout << "Enter phoneNumber: ";
+	std::cin >> data;
+	this->setPhoneNumber(data);
+
+	std::cout << "Enter darkSecret: ";
+	std::cin >> data;
+	this->setDarkSecret(data);
+		
+}
+
+bool Contact::isEmptyField() {
+	
+	if (this->getName().empty()) {
+
+		return (true);
+
+	}
+	if (this->getLastname().empty()) {
+
+		return (true);
+
+	}
+	if (this->getNickname().empty()) {
+
+		return (true);
+
+	}
+	if (this->getPhoneNumber().empty()) {
+
+		return (true);
+
+	}
+	if (this->getDarkSecret().empty()) {
+
+		return (true);
+
+	}
+	return (false);
 }
 
 Contact::~Contact() {
-	
-	std::cout << "Contact distructor\n";
 
 }
