@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:43 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 17:08:49 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/06 17:17:43 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook() : count(0) {
-
-	std::cout << "PhoneBook constructor\n";
 
 }
 
@@ -50,12 +48,11 @@ void PhoneBook::addContact() {
 		this->contacts[this->count] = Contact();
 		this->count--;
 	}
+	
 	this->count++;
 	
 }
 
 PhoneBook::~PhoneBook() {
-
-	std::cout << "PhoneBook distructor\n";
 	
 }

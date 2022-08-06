@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:13 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 17:12:25 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/06 17:16:46 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,23 +74,23 @@ void Contact::addContact() {
 	std::string data;
 	
 	std::cout << "Enter name: ";
-	std::cin >> data;
+	std::getline(std::cin, data);
 	this->setName(data);
 
 	std::cout << "Enter lastname: ";
-	std::cin >> data;
+	std::getline(std::cin, data);
 	this->setLastname(data);
 
 	std::cout << "Enter nickname: ";
-	std::cin >> data;
+	std::getline(std::cin, data);
 	this->setNickname(data);
 
 	std::cout << "Enter phoneNumber: ";
-	std::cin >> data;
+	std::getline(std::cin, data);
 	this->setPhoneNumber(data);
 
 	std::cout << "Enter darkSecret: ";
-	std::cin >> data;
+	std::getline(std::cin, data);
 	this->setDarkSecret(data);
 		
 }
