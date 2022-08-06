@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:43 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 18:11:13 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/06 18:16:34 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,11 +95,11 @@ void PhoneBook::viewContact() {
 
 void	PhoneBook::viewFullInfo(Contact contact)
 {
-	std::cout	<< "|" << "Firstname:       |" << std::setw(10) << contact.getName() << "|\n"
-				<< "|" << "Lastname:        |" << std::setw(10) << contact.getLastname() << "|\n"
-				<< "|" << "Nickname:        |" << std::setw(10) << contact.getNickname() << "|\n"
-				<< "|" << "PhoneNumber:     |" << std::setw(10) << contact.getPhoneNumber() << "|\n"
-				<< "|" << "DarkSecret:  	|" << std::setw(10) << contact.getDarkSecret() << "|\n";
+	std::cout	<< "|" << "Firstname:	|" << std::setw(10) << contact.getName() << "|\n"
+				<< "|" << "Lastname:	|" << std::setw(10) << contact.getLastname() << "|\n"
+				<< "|" << "Nickname:	|" << std::setw(10) << contact.getNickname() << "|\n"
+				<< "|" << "PhoneNumber:	|" << std::setw(10) << contact.getPhoneNumber() << "|\n"
+				<< "|" << "DarkSecret:	|" << std::setw(10) << contact.getDarkSecret() << "|\n";
 }
 
 void	PhoneBook::numContact(void)
