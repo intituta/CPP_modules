@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:43 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 18:16:34 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/06 18:23:34 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,6 @@ void PhoneBook::searchContact() {
 		numContact();
 
 	}
-	
 }
 
 PhoneBook::~PhoneBook() {
