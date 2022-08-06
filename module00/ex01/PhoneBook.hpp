@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:29:05 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 17:49:01 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/06 18:04:45 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class PhoneBook {
 	 	int 	count;
 		Contact contacts[8];
 		void viewContact();
+		void numContact();
+		void viewFullInfo(Contact contact);
 		 
 	 public:
 		
