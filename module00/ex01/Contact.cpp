@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:13 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/07 11:13:31 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/07 11:26:48 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,65 +18,43 @@ Contact::Contact() {
 }
 
 std::string Contact::getName() {
-	
-	return (this->name);
-	
+	return (this->name);	
 }
 std::string Contact::getLastname() {
-
-	return (this->lastname);
-	
+	return (this->lastname);	
 }
 std::string Contact::getNickname() {
-
 	return (this->nickname);
-
 }
 std::string Contact::getPhoneNumber() {
-
 	return (this->phoneNumber);
-
 }
 std::string Contact::getDarkSecret() {
-
 	return (this->darkSecret);
-
 }
 
 void Contact::setName(std::string data) {
-
 	this->name = data;
-	
 }
 void Contact::setLastname(std::string data) {
-
-	this->lastname = data;
-	
+	this->lastname = data;	
 }
 void Contact::setNickname(std::string data) {
-
 	this->nickname = data;
-
 }
 void Contact::setPhoneNumber(std::string data) {
-
 	this->phoneNumber = data;
-
 }
 void Contact::setDarkSecret(std::string data) {
-
 	this->darkSecret = data;
-
 }
 
 void Contact::addContact() {
 
-	std::string data;
-	
+	std::string data;	
 	std::cout << "Enter name: ";
 	std::getline(std::cin, data);
-	if (std::cin.eof()) {
-		
+	if (std::cin.eof()) {		
         return ;
     }
 	this->setName(data);
@@ -100,35 +78,23 @@ void Contact::addContact() {
 }
 
 bool Contact::isEmptyField() {
-	
 	if (this->getName().empty()) {
-
 		return (true);
-
 	}
 	if (this->getLastname().empty()) {
-
 		return (true);
-
 	}
 	if (this->getNickname().empty()) {
-
 		return (true);
-
 	}
 	if (this->getPhoneNumber().empty()) {
-
 		return (true);
-
 	}
 	if (this->getDarkSecret().empty()) {
-
 		return (true);
-
 	}
 	return (false);
 }
-
 Contact::~Contact() {
-
+	
 }

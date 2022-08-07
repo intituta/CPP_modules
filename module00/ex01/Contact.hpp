@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:41 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 16:47:38 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/07 11:26:33 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,14 @@
 
 class Contact {
     private:
-
 		std::string name;
 		std::string lastname;
 		std::string nickname;
 		std::string phoneNumber;
 		std::string darkSecret;
-	
 	public:
-	
 		Contact();
-		
+	
 		void addContact();
 		bool isEmptyField();
 		
@@ -41,8 +38,7 @@ class Contact {
 		void setPhoneNumber(std::string data);
 		void setDarkSecret(std::string data);
 		
-		~Contact();
-		
+		~Contact();	
 };
 
 #endif
