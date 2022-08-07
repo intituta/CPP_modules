@@ -6,11 +6,11 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:27:51 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/07 11:24:20 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/07 19:07:28 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+// #include <iostream>
 #include "PhoneBook.hpp"
 
 int main(void) {
@@ -21,7 +21,8 @@ int main(void) {
 	PhoneBook.getMain();
 	while (1) {
 		std::cout << "Enter command : ";
-		std::getline(std::cin, input);
+		std::cin >> input;
+
 		if (input == "EXIT") {
 			std::cout << "Bye\n";
 			return (0);
