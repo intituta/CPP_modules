@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:27:51 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 17:54:19 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/07 11:21:33 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,9 @@ int main(void) {
 	while (1) {
 		
 		std::cout << "Enter command : ";
+		std::getline(std::cin, input);
 		
-		if (!std::getline(std::cin, input)) {
-
-			std::cout << "Bye\n";
-			return (0);
-
-		}
-		else if (input == "EXIT") {
+		if (input == "EXIT") {
 			
 			std::cout << "Bye\n";
 			return (0);
@@ -51,6 +46,8 @@ int main(void) {
 			std::cout << "Command not found\n";
 			
 		}
+		clearerr(stdin);
+        std::cin.clear();
 	}
 	
 	return (0);

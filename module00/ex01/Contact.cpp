@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:13 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/06 17:16:46 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/07 11:13:31 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,10 @@ void Contact::addContact() {
 	
 	std::cout << "Enter name: ";
 	std::getline(std::cin, data);
+	if (std::cin.eof()) {
+		
+        return ;
+    }
 	this->setName(data);
 
 	std::cout << "Enter lastname: ";
