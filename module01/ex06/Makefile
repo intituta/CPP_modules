@@ -6,11 +6,11 @@
 #    By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/04 17:50:12 by kferterb          #+#    #+#              #
-#    Updated: 2022/08/08 10:47:44 by kferterb         ###   ########.fr        #
+#    Updated: 2022/08/08 10:47:47 by kferterb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	harl
+NAME	=	harlFilter
 
 SRC		=	main.cpp Harl.cpp
 
