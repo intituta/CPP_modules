@@ -6,14 +6,13 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 20:37:55 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/07 20:38:14 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/08 10:40:36 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Header.hpp"
 
-int main(int arc, char **arv)
-{
+int main(int arc, char **arv) {
     if (arc != 4)
         error();
     std::string buf;
@@ -34,8 +33,7 @@ int main(int arc, char **arv)
     std::getline(readfile, buf);
     size_t pos = 0;
     pos = buf.find(s1, pos);
-    while (pos != std::string::npos)
-    {
+    while (pos != std::string::npos) {
         buf.erase(pos, s1.length());
         buf.insert(pos, s2);
         pos = buf.find(s1, pos + s2.length());
