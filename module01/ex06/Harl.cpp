@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 20:45:30 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/08 10:19:16 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/08 10:53:56 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,15 @@ void Harl::complain(std::string level) {
 
 	std::string arr[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-	int index = -1;
 	int len;
+	int index = -1;
 
 	len = arr->length();
 
 	for (int i = 0; i < len; ++i) {
 		if (arr[i] == level) {
 			index = i;
+			cout << "[ " + arr[i] + " ]\n";
 			break;
 		}
 	}
