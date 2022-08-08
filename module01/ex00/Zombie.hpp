@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 12:18:08 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/07 16:40:00 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/08 11:29:30 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Zombie {
 		std::string name;
 };
 
-Zombie *newZombie(std::string name);
+Zombie* newZombie(std::string name);
 void randomChump(std::string name);
 
 #endif
