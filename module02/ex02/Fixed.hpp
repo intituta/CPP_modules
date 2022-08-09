@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 09:15:52 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/09 12:26:19 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/09 12:49:46 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 #define FIXED_HPP
 #include <cmath>
 #include <iostream>
-
-using std::cout;
-using std::endl;
 
 class Fixed {
 
