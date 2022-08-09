@@ -6,11 +6,11 @@
 #    By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/04 17:50:12 by kferterb          #+#    #+#              #
-#    Updated: 2022/08/09 10:32:52 by kferterb         ###   ########.fr        #
+#    Updated: 2022/08/09 14:00:10 by kferterb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	fixed
+NAME	=	a.out
 
 SRC		=	main.cpp Fixed.cpp
 
