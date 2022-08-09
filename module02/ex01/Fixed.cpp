@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 09:15:43 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/09 11:26:30 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/09 11:55:54 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,6 @@ int Fixed::toInt() const {
 	return this->value >> fractional;
 }
 
-std::ostream &operator << (std::ostream &os, const Fixed &fixed) {
+std::ostream& operator << (std::ostream& os, const Fixed& fixed) {
 	return os << fixed.toFloat();
 }

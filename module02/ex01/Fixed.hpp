@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 09:15:52 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/09 11:26:06 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/09 11:55:42 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ private:
 	int value;
 };
 
-std::ostream &operator << (std::ostream &os, const Fixed &fixed);
+std::ostream& operator << (std::ostream &os, const Fixed &fixed);
 
 #endif
