@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 09:15:52 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/09 11:11:27 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/09 11:26:06 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 #include <cmath>
 #include <iostream>
-
-using std::cout;
-using std::endl;
 
 class Fixed {
 
