@@ -6,25 +6,35 @@
 /*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 19:04:51 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/10 17:34:09 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/10 17:34:22 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void) {
-    
-	FragTrap one;
-	FragTrap two("Frag");
+	DiamondTrap one;
 
-	one.attack("Frag");
-	two.takeDamage(1);
+	std::cout << std::endl;
 
-	two.beRepaired(1);
+	DiamondTrap two("Diamond");
+
+	std::cout << std::endl;
+
+	one.attack("SomeTrap");
+	two.attack("AnotherTrap");
+
+	std::cout << std::endl;
 
 	one.highFivesGuys();
-	two.highFivesGuys();
+	two.guardGate();
+
+	std::cout << std::endl;
+
+	one.whoAmI();
+	two.whoAmI();
+
+	std::cout << std::endl;
 
 	return 0;
 }

@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/09 19:04:51 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/10 17:34:09 by kferterb         ###   ########.fr       */
+/*   Created: 2022/08/10 17:20:16 by kferterb          #+#    #+#             */
+/*   Updated: 2022/08/10 17:38:06 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-int main(void) {
-    
-	FragTrap one;
-	FragTrap two("Frag");
+#include "ClapTrap.hpp"
 
-	one.attack("Frag");
-	two.takeDamage(1);
+class FragTrap : virtual public ClapTrap {
 
-	two.beRepaired(1);
+private:
+	int fragHitPoints;
+	int fragAttackDamage;
 
-	one.highFivesGuys();
-	two.highFivesGuys();
+public:
+	FragTrap();
+	~FragTrap();
+	FragTrap(std::string name);
+	FragTrap(const FragTrap &fragTrap);
+	FragTrap& operator = (const FragTrap &fragTrap);
 
-	return 0;
-}
+	void highFivesGuys(void);
+	
+	int getFragHitPoints();
+	int getFragAttackDamage();
+};
+
+#endif
+

@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 17:20:14 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/10 17:50:57 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/10 17:50:00 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,18 @@ ScavTrap::ScavTrap() {
     
     this->name = "defaultGate";
     this->hitPoints = 100;
-    this->energyPoints = 50;
-    this->attackDamage = 20;
+	this->energyPoints = 50;
+	this->scavEnergyPoints = 50;
+	this->attackDamage = 20;
     std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
-    
-     this->hitPoints = 100;
-     this->energyPoints = 50;
-     this->attackDamage = 20;
+
+    this->hitPoints = 100;
+	this->energyPoints = 50;
+	this->scavEnergyPoints = 50;
+	this->attackDamage = 20;
      std::cout << "ScavTrap name parametr constructor called" << std::endl;
 }
 
@@ -38,6 +40,11 @@ ScavTrap::ScavTrap(const ScavTrap& scavTrap) {
 ScavTrap::~ScavTrap() {
     
     std::cout << "ScavTrap destructor called" << std::endl;
+}
+
+int ScavTrap::getScavEnergyPoints() {
+    
+	return this->scavEnergyPoints;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& scavTrap) {

@@ -6,13 +6,14 @@
 /*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 17:20:14 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/10 17:20:15 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/10 17:51:41 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap() {
+    
     this->name = "defaultGate";
     this->hitPoints = 100;
     this->energyPoints = 50;
@@ -20,7 +21,8 @@ ScavTrap::ScavTrap() {
     std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
+    
      this->hitPoints = 100;
      this->energyPoints = 50;
      this->attackDamage = 20;
