@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/10 17:20:16 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/10 17:20:17 by kferterb         ###   ########.fr       */
+/*   Created: 2022/08/09 19:04:51 by kferterb          #+#    #+#             */
+/*   Updated: 2022/08/10 17:22:52 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-# include <iostream>
-# include "ClapTrap.hpp"
+int main(void) {
+    
+	FragTrap one;
+	FragTrap two("Frag");
 
-class ScavTrap : public ClapTrap {
+	one.attack("Frag");
+	two.takeDamage(1);
 
-    public:
+	two.beRepaired(1);
 
-        ScavTrap();
-        ScavTrap(std::string name);
-        ScavTrap(const ScavTrap& scavTrap);
-        ~ScavTrap();
-
-        ScavTrap& operator=(const ScavTrap& scavTrap);
-
-        void guardGate();
-        void attack(const std::string& target);
-};
-
-#endif
+	one.highFivesGuys();
+	two.highFivesGuys();
+}
