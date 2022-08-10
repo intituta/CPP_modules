@@ -42,7 +42,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap &diamondTrap) {
 	*this = diamondTrap;
 }
 
-DiamondTrap &DiamondTrap::operator=(const DiamondTrap &diamondTrap) {
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap& diamondTrap) {
 
 	if (this != &diamondTrap) {
 		this->name = diamondTrap.name;
@@ -53,7 +53,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &diamondTrap) {
 	return *this;
 }
 
-void DiamondTrap::attack(const std::string &target) {
+void DiamondTrap::attack(const std::string& target) {
 
 	ScavTrap::attack(target);
 }

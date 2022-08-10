@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 17:20:16 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/10 17:57:12 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/10 18:00:37 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ public:
 	FragTrap();
 	~FragTrap();
 	FragTrap(std::string name);
-	FragTrap(const FragTrap &fragTrap);
-	FragTrap& operator = (const FragTrap &fragTrap);
+	FragTrap(const FragTrap& fragTrap);
+	FragTrap& operator = (const FragTrap& fragTrap);
 
 	void highFivesGuys(void);
 	
