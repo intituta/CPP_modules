@@ -10,3 +10,71 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap(void) : name("default"), hitPoints(10), energyPoints(10), attackDamage(0) {
+
+    std::cout << "Default constructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
+    
+    std::cout << "Name parametr constructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& clapTrap) {
+
+    std::cout << "Copy constructor called" << std::endl;
+    *this = clapTrap;
+}
+
+ClapTrap::~ClapTrap(void) {
+
+    std::cout << this->name << " deleted" << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& clapTrap) {
+
+    if (this != &clapTrap) {
+        
+        this->name = clapTrap.name;
+        this->hitPoints = clapTrap.hitPoints;
+        this->energyPoints = clapTrap.energyPoints;
+        this->attackDamage = clapTrap.attackDamage;
+    }
+    return *this;
+}
+
+void ClapTrap::attack(const std::string& target) {
+    
+    if (this->hitPoints < 1 or this->energyPoints < 1) {
+
+        std::cout << this->name << " it is impossible to attack" << std::endl;
+        return;
+    } else {
+        
+        std::cout << "ClapTrap " << this->name << " attack "
+            << target << " , causing 1 points of damage" << std::endl;
+    }
+}
+
+void ClapTrap::takeDamage(unsigned int amount) {
+    
+    this->hitPoints -= amount;
+    std::cout << this->name << " taken of "
+        << amount << " damage" << std::endl;
+}
+
+void ClapTrap::beRepaired(unsigned int amount) {
+
+    if (this->hitPoints < 1 or this->energyPoints < 1) {
+    
+        std::cout << this->name << " it is imposible to repair" << std::endl;
+        return;
+    } else {
+
+        this->hitPoints += amount;
+        std::cout << this->name << " repaired " << amount << " hit points" << std::endl;
+    }
+}
+
