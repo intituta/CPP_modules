@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kferterb <kferterb@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:28:43 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/07 11:27:54 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/13 16:33:58 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,17 @@ void PhoneBook::addContact() {
 	if (this->index == 8) {	
 		this->index = 0;	
 	}
-
-	this->contacts[this->index].addContact();
-	if (this->contacts[this->index].isEmptyField()) {
+	Contact contact;
+	contact.addContact();
+	if (contact.isEmptyField()) {
 		std::cout << "Empty field. Try again\n";
-		this->contacts[this->index] = Contact();
-		this->index--;
+		return;
 	}
 	
-	if (count < 8) {	
-		this->count++;	
+	this->contacts[this->index] = contact; 
+	
+	if (count < 8) {
+		this->count++;
 	}
 	this->index++;
 }
