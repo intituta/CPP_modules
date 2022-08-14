@@ -5,13 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/14 17:55:08 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/14 18:05:21 by kferterb         ###   ########.fr       */
+/*   Created: 2022/08/14 18:06:45 by kferterb          #+#    #+#             */
+/*   Updated: 2022/08/14 18:06:47 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
+
 #include <string>
 #include <iostream>
 
