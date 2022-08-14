@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/14 17:59:28 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/14 17:59:29 by kferterb         ###   ########.fr       */
+/*   Created: 2022/08/14 17:55:11 by kferterb          #+#    #+#             */
+/*   Updated: 2022/08/14 17:55:12 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ Form::Form() : name("Form"), isSigned(false), gradeToSign(1), gradeToExecute(1) 
 
 Form::~Form() {}
 
-Form::Form(int gradeToSign, int gradeToExecute)
-: name("Form"), isSigned(false), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute) {
+Form::Form(std::string name, int gradeToSign, int gradeToExecute)
+: name(name), isSigned(false), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute) {
 	if (gradeToSign < 1 || gradeToExecute < 1) {
 		throw Form::GradeTooHighException("Grade too high");
 	} else if (gradeToSign > 150 || gradeToExecute > 150) {

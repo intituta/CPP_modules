@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/14 17:59:31 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/14 17:59:32 by kferterb         ###   ########.fr       */
+/*   Created: 2022/08/14 17:55:14 by kferterb          #+#    #+#             */
+/*   Updated: 2022/08/14 17:55:17 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Form {
 
 public:
 	Form();
-	~Form();
-	Form(int gradeToSign, int gradeToExecute);
+	virtual ~Form();
+	Form(std::string name, int gradeToSign, int gradeToExecute);
 	Form(const Form &form);
 
 	std::string getName() const;
@@ -37,6 +37,7 @@ public:
 	int getGradeToExecute() const;
 
 	void beSigned(Bureaucrat &bureaucrat);
+	virtual void execute(Bureaucrat const & executor) const = 0;
 
 	class GradeTooHighException : public std::runtime_error {
 
@@ -48,6 +49,12 @@ public:
 
 	public:
 		GradeTooLowException(const std::string &error) : std::runtime_error(error) {}
+	};
+
+	class NotSignedException : public std::runtime_error {
+
+	public:
+		NotSignedException(const std::string &error) : std::runtime_error(error) {}
 	};
 
 private:
