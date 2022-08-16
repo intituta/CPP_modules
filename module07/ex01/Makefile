@@ -6,13 +6,13 @@
 #    By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/14 09:16:28 by kferterb          #+#    #+#              #
-#    Updated: 2022/08/15 14:14:31 by kferterb         ###   ########.fr        #
+#    Updated: 2022/08/16 11:03:43 by kferterb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	a.out
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp Awesome.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
