@@ -6,13 +6,13 @@
 #    By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/14 09:16:28 by kferterb          #+#    #+#              #
-#    Updated: 2022/08/16 16:25:45 by kferterb         ###   ########.fr        #
+#    Updated: 2022/08/17 12:20:33 by kferterb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	a.out
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp Span.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
