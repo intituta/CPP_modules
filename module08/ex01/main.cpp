@@ -6,7 +6,7 @@
 /*   By: kferterb <kferterb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 13:50:28 by kferterb          #+#    #+#             */
-/*   Updated: 2022/08/17 12:20:42 by kferterb         ###   ########.fr       */
+/*   Updated: 2022/08/17 15:37:41 by kferterb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,6 @@ int main() {
 
 	std::cout << spa.shortestSpan() << std::endl;
 	std::cout << spa.longestSpan() << std::endl;
-	std::cout << "---" << std::endl;
-
-	Span span(1000);
-	std::srand(time(0));
-	for (int i = 0; i < 1000; ++i) {
-		int random = std::rand();
-		if (std::rand() % 2 == 0) {
-			random = -random;
-		}
-		span.addNumber(random);
-	}
-
-	std::cout << span.shortestSpan() << std::endl;
-	std::cout << span.longestSpan() << std::endl;
 	std::cout << "---" << std::endl;
 
 	std::vector<int> vector;
